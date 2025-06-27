@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Plataforma Azuos</title>
+  <link rel="icon" href="../assets/logo.png" type="image/png">
+  <link rel="stylesheet" href="../static/css/index.css" />
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <img src="{{ url_for('static', filename='assets/logo.png') }}" alt="Logo Azuos" />
+    </div>
+    <nav class="menu">
+      <ul>
+        <li><a href="../cadastro">Cadastro</a></li>
+        <li><a href="../login">Login</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="quem-somos">
+      <h2>Quem somos?</h2>
+      <figure>
+        <img src="foto-grupo.png" alt="Foto do grupo de estudantes" />
+      </figure>
+      <p>
+        Nós somos um grupo de estudantes cursando o Ensino Médio com técnico articulado em Desenvolvimento de Sistemas.
+        Somos Gabriel Toledo, João Victor Demarchi, Maria Laura Santos, Mathias Basílio e Nicolas Esteves.
+        Orientados por Debora Souza e Priscila Bento.
+      </p>
+    </section>
+
+    <section class="nossa-historia">
+      <h2>Nossa história</h2>
+      <p>
+        Em nossa escola, no ano de 2025, participamos de uma competição que tinha como objetivo criar uma solução que envolvesse a IA e a ética.
+        A partir disso, surgiu a ideia de criar a plataforma "Azuos", um método para capacitar líderes e liderados de empresas a saberem se impor e combater o capacitismo dentro do ambiente de trabalho.
+      </p>
+    </section>
+
+    <section class="objetivos">
+      <h2>Objetivos</h2>
+      <div class="caixa-imagens">
+        <figure>
+          <img src="../assets/debora.png" alt="Palavras-chave do projeto formando 'Débora': Dedicação, " />
+        </figure>
+        <figure>
+          <img src="../assets/priscila.png" alt="Palavras-chave do projeto formando 'Priscila'" />
+        </figure>
+      </div>
+      <p>
+        Criar uma plataforma que seja adepta às práticas do Compliance e ESG’s, incentivando valores e ética a partir do problema: “capacitismo dentro das empresas”, capacitando e profissionalizando líderes e liderados a acessibilizar e incluírem dentro do ambiente de trabalho.
+    </section>
+
+    <section class="lideres-liderados">
+      <h2>Bons líderes e liderados éticos em relação ao capacitismo</h2>
+      <p>O líder ético é aquele capaz de analisar o ambiente e seus liderados com responsabilidade, igualdade, imparcialidade e justiça. Com isso, uma escuta ativa sobre a fala de seus liderados e um olhar atento para as necessidades dos mesmos, são exemplos de grandes fatores importantes, pois através disso poderá escolher os melhores caminhos para o bem-estar, saúde e desenvolvimento dos guiados e da empresa. Nesse contexto, cabe a um líder em relação a lutar contra o capacitismo dentro da instituição: </p>
+      <ul>
+        <li>Ser respeitoso, ético, inclusivo e anti capacitista;</li>
+        <li>Observar os ambientes físicos da empresa e analisar se estão em coerência com as necessidades do indivíduo especial;</li>
+        <li>Incentivar a compartilhação de ideias, melhorias e críticas;</li>
+        <li>Atentar-se a práticas capacitistas e denunciá-las;</li>
+        <li>Ter uma escuta ativa e plena;</li>
+        <li>Respeitar os limites e preferências;</li>
+        <li>Conhecer mais sobre as deficiências;</li>
+        <li>Incentivar e organizar eventos de conscientização.</li>
+      </ul>
+      <p>Os liderados como membros que mais convivem no dia a dia com todos os outros funcionários liderados devem obter um contato respeitoso e natural promovendo o sentimento de pertencimento, acolhimento e disposição para a evolução profissional, pessoal e de um ambiente agradável e ético. Nesse contexto, cabe a um liderado em relação a lutar contra o capacitismo dentro da instituição: </p>
+      <ul>
+        <li>Ser respeitoso, ético, inclusivo e anti capacitista;</li>
+        <li>Ter uma escuta ativa e olhar atento;</li>
+        <li>Respeitar os limites e preferências do indivíduo;</li>
+        <li>Buscar conhecer sobre as deficiências e doenças;</li>
+        <li>Promover diálogos;</li>
+        <li>Tratar com naturalidade e profissionalismo;</li>
+        <li>Em grupo, criar debates de sugestões para a inclusão;</li>
+        <li>Estar disposto à ajudar.</li>
+      </ul>
+      <p>Com o conhecimento sobre as regras da empresa e a incessante busca pelo conhecimento/aperfeiçoamento, são imensas as soluções para combater todos e quaisquer tipos de preconceito e discriminação proporcionando cada vez a inclusão.</p>
+    </section>
+
+    <section class="formulario">
+      <h2>Formulário</h2>
+      <p>
+        A aba “formulário” será mostrado após o login. Nessa aba, você como líder, irá responder a 15 perguntas formuladas por nós com o intuito de avaliar quais seriam suas atitudes como líder e a partir da análise, a nossa IA irá formular relatórios e trilhas de capacitação (de acordo com a necessidade) para ajudá-lo a entender quais atitudes você deve realizar para combater o capacitismo.
+      </p>
+    </section>
+
+    <section class="historico">
+      <h2>Histórico</h2>
+      <p>
+        A aba “histórico” deve ser acessada após você responder o formulário. Nessa aba, poderá acessar as respostas que registrou no formulário, o relatório gerado pela IA sobre suas respostas indicando sugestões de mudança e a trilha de capacitação (também gerada pela IA necessária)  para o líder se preparar e especializar sobre ética dentro da capacitação.
+    </section>
+
+  </main>
+<footer class="rodape">
+  <ul>
+    <li><a href="../index">Voltar ao topo</a></li>
+    <li><a href="../login">Contate-nos</a></li>
+  </ul>
+</footer>
+</body>
+</html>

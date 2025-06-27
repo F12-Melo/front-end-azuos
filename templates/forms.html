@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Formulário para Líderes</title>
+	<link rel="stylesheet" href="../static/css/forms.css">
+</head>
+<body>
+  <div class="logo">
+	<img src="{{ url_for('static', filename='assets/logo.png') }}" alt="Logo Azuos" width="150" height="150" />
+  </div>
+    <!-- Aqui começa o formulário -->
+  <form method="POST" action="/enviar_formulario">
+	<form>
+    	<h1>Perguntas aos Líderes</h1>
+   	 
+    	<div class="instructions">
+        	<p>→ Responda com honestidade</p>
+        	<p>→ Marque apenas uma resposta</p>
+    	</div>
+   	 
+    	<div class="form-section">
+        	<div class="grid-container">
+            	<div class="grid-item col-2">
+                	<label>Nome completo</label>
+  					<input type="text" name="nome" value="{{ nome }}" readonly>
+            	</div>
+           	 
+            	<div class="grid-item col-2">
+                	<label>E-mail</label>
+                	<input type="email" name="email" value="{{ email }}" readonly>
+            	</div>
+        	</div>
+    	</div>
+   	 
+    	<div class="divider"></div>
+   	 
+    	<div class="form-section">
+        	<div class="question">
+            	<h3>QUESTÃO 1) "Em uma situação hipotética, baseando nas suas experiências como líder, se você tivesse como definir 4 características suas, de forma honesta, você definiria:"</h3>
+            	<div class="options-grid">
+                	<label><input type="radio" name="questao1" value="A" required>"HONESTIDADE, RESPEITO, JUSTIÇA E TRANSPARÊNCIA."</label>
+                	<label><input type="radio" name="questao1" value="B">"DUREZA, RESPONSABILIDADE, ESTABILIDADE E CONHECIMENTO TÉCNICO."</label>
+                	<label><input type="radio" name="questao1" value="C">"HONESTIDADE, TRANSPARÊNCIA, CONFIABILIDADE E INTEGRIDADE."</label>
+                	<label><input type="radio" name="questao1" value="D">"RESPONSABILIDADE, INTEGRIDADE, CONFIABILIDADE E RESPEITO."</label>
+            	</div>
+        	</div>
+
+        	<div class="question">
+            	<h3>QUESTÃO 2) "Na manhã do seu expediente, chegam dois funcionários à sua sala, relatando que tiveram um conflito. Dentre este conflito o primeiro funcionário descreve que após a quebra de uma ferramenta na área de overhaul (montagem e desmontagem na Indústria Aeronáutica), ele gritou com o seu colega de trabalho e em um momento de raiva acabou o xingando de "inútil". O que você faria?"</h3>
+            	<div class="options-grid">
+                	<label><input type="radio" name="questao2" value="A" required>"Você adverte os dois funcionários e suspende os mesmos."</label>
+                	<label><input type="radio" name="questao2" value="B">"Você estuda o conflito, de forma cuidadosa e advertem os funcionários de forma proporcional ao agravo"</label>
+                	<label><input type="radio" name="questao2" value="C">"Você prefere estudar o caso, com cuidado, e chega a conclusão que a melhor opção é buscar uma solução pacífica de conflitos."</label>
+                	<label><input type="radio" name="questao2" value="D">"Você chega a conclusão que deve imediatamente enviar ao setor de compliance e prefere não opinar sobre a questão."</label>
+            	</div>
+        	</div>
+
+        	<div class="question">
+            	<h3>QUESTÃO 3) "Na tarde do seu expediente, seu chefe chega em sua sala e diz que sua produção está parada, visto isso, ele adverte você e diz que você será cobrado, com base nessa situação você:"</h3>
+            	<div class="options-grid">
+                	<label><input type="radio" name="questao3" value="A" required>"Vai até seus funcionários e adverte-os dizendo que a produção está baixa e que os culpados são os responsáveis pela produção."</label>
+                	<label><input type="radio" name="questao3" value="B">"Cria uma nova estratégia de abordagem para solucionar este problema."</label>
+                	<label><input type="radio" name="questao3" value="C">"Busca um novo aperfeiçoamento para a gestão de crises dentro do seu setor."</label>
+                	<label><input type="radio" name="questao3" value="D">"Institui uma política de controle mais rígido e garante assim o gerenciamento de crises dentro do seu setor."</label>
+            	</div>
+        	</div>
+
+        	<div class="question">
+            	<h3>QUESTÃO 4) "Qual instrumento você acredita que está de acordo com o controle empresarial de liderança?"</h3>
+            	<div class="options-grid">
+                	<label><input type="radio" name="questao4" value="A" required>"COMPLIANCE"</label>
+                	<label><input type="radio" name="questao4" value="B">"RELATÓRIOS NUMÉRICOS DE CASOS"</label>
+                	<label><input type="radio" name="questao4" value="C">"RELATÓRIO DE OCORRÊNCIA FOCAL DE ABORDAGEM"</label>
+                	<label><input type="radio" name="questao4" value="D">"PLANO POLÍTICO ADMINISTRATIVO"</label>
+            	</div>
+        	</div>
+
+        	<div class="question">
+            	<h3>QUESTÃO 5) "Com base no código de ética, sobre LIDERANÇA, uma situação de problemas com acessibilidade de pessoas com deficiência auditiva total, como seria sua conduta a respeito da socialização dessa pessoa com os colegas de trabalho?"</h3>
+            	<div class="options-grid">
+                	<label><input type="radio" name="questao5" value="A" required>"Dar as palestras e capacitação em LIBRAS."</label>
+                	<label><input type="radio" name="questao5" value="B">"Contratar um tradutor de libras para a pessoa com deficiência."</label>
+                	<label><input type="radio" name="questao5" value="C">"Distribuir na empresa uma série de cartazes com as principais palavras e expressões em LIBRAS."</label>
+                	<label><input type="radio" name="questao5" value="D">"Outra opção."</label>
+            	</div>
+        	</div>
+
+        	<div class="question">
+            	<h3>QUESTÃO 6) "A empresa que você trabalha é capaz de realizar a contratação de funcionários cegos?"</h3>
+            	<div class="options-grid">
+                	<label><input type="radio" name="questao6" value="A" required>"Sim, pois temos atividades que este funcionário pode desenvolver"</label>
+                	<label><input type="radio" name="questao6" value="B">"Não, o ramo comercial que atuamos atualmente não pode receber este público"</label>
+                	<label><input type="radio" name="questao6" value="C">"No momento não, pois não temos infraestrutura para a recepção desses funcionários"</label>
+                	<label><input type="radio" name="questao6" value="D">"No momento não, e não temos previsão para adaptarmo-nos a esse público."</label>
+            	</div>
+        	</div>
+
+        	<div class="question">
+            	<h3>QUESTÃO 7) "Na maioria das vezes os banheiros adaptados são uma realidade dentro das empresas, entretanto, esses geralmente estão disponíveis em locais distantes e com unidades quase que únicas, dentro de unidades grandes, fazendo assim uma situação de longo deslocamento de pessoas com deficiência de mobilidade ou qualquer outra qualificação que necessite de sanitário exclusivo. O que você trás como solução para essa problemática?"</h3>
+            	<div class="options-grid">
+                	<label><input type="radio" name="questao7" value="A" required>"Adaptação de todos os banheiros para realizar uma inclusão eficiente."</label>
+                	<label><input type="radio" name="questao7" value="B">"Adaptação de banheiros selecionados para garantir a acessibilidade correta."</label>
+                	<label><input type="radio" name="questao7" value="C">"Garantir a mediação entre os sanitários acessíveis conciliando a ocorrência na medida da demanda."</label>
+                	<label><input type="radio" name="questao7" value="D">"Garantir uma solução diferente das apresentadas anteriormente."</label>
+            	</div>
+        	</div>
+
+        	<div class="question">
+            	<h3>QUESTÃO 8) "O líder ético deve ser o maior defensor de toda a acessibilidade para os seus liderados, garantindo a prevenção de qualquer situação que possa gerar qualquer constrangimento aos seus liderados. Dessa forma, todos os problemas devem ser pensados e solucionados da melhor forma. Como você reagiria em uma situação de ter que dividir a liderança em mais divisões?"</h3>
+            	<div class="options-grid">
+                	<label><input type="radio" name="questao8" value="A" required>"Optaria por segregar a minha liderança, dividindo as funções"</label>
+                	<label><input type="radio" name="questao8" value="B">"Prefiro deixar a liderança sobre o meu comando para garantir que todas as funções sejam cumpridas, pois acredito que dividir a liderança pode ocasionar lideranças ociosas e sem funções equilibradas."</label>
+                	<label><input type="radio" name="questao8" value="C">"Acredito que dividir a liderança irá fazer com que as funções sejam cumpridas de forma insuficiente."</label>
+                	<label><input type="radio" name="questao8" value="D">"Acredito que segregar a liderança deve ser uma realidade, porém sem alterar os recursos financeiros do funcionário para garantir a minha valorização como líderes."</label>
+            	</div>
+        	</div>
+
+        	<div class="question">
+            	<h3>QUESTÃO 9) "Para você, em sua liderança o que é prioridade:"</h3>
+            	<div class="options-grid">
+                	<label><input type="radio" name="questao9" value="A" required>"Bem estar trabalhista para seus liderados."</label>
+                	<label><input type="radio" name="questao9" value="B">"Economia de recursos da empresa, uma vez que esse objetivo é um dos mais importantes e pode custar seu emprego."</label>
+                	<label><input type="radio" name="questao9" value="C">"Economia de situações problemas, assim, criando um perfil físico de funcionários para os setores."</label>
+                	<label><input type="radio" name="questao9" value="D">"Economia de situações de conflitos, evitando funcionários com deficiência para certas funções, para que assim eles não sejam expostos."</label>
+            	</div>
+        	</div>
+
+        	<div class="question">
+            	<h3>QUESTÃO 10) "Em uma equipe recém-formada, você percebe que há conflito de ideias e disputas de ego. Qual a melhor atitude de um líder para garantir harmonia e produtividade no grupo?"</h3>
+            	<div class="options-grid">
+                	<label><input type="radio" name="questao10" value="A" required>"Realizar reuniões de alinhamento e propor mediação de conflitos com escuta ativa e empatia."</label>
+                	<label><input type="radio" name="questao10" value="B">"Impor regras rígidas para evitar conflitos e manter o foco no resultado."</label>
+                	<label><input type="radio" name="questao10" value="C">"Delegar a responsabilidade da harmonia ao RH, já que isso não é papel do líder."</label>
+                	<label><input type="radio" name="questao10" value="D">"Aplicar uma abordagem autoritária para mostrar quem tem o controle da equipe."</label>
+            	</div>
+        	</div>
+
+        	<div class="question">
+            	<h3>QUESTÃO 11) "Um colaborador constantemente entrega resultados abaixo do esperado. Como você, como líder, deve lidar com essa situação?"</h3>
+            	<div class="options-grid">
+                	<label><input type="radio" name="questao11" value="A" required>"Promover uma conversa individual com foco no desenvolvimento, oferecendo apoio e metas claras."</label>
+                	<label><input type="radio" name="questao11" value="B">"Afastar o colaborador de projetos importantes para evitar prejuízos."</label>
+                	<label><input type="radio" name="questao11" value="C">"Ignorar o problema esperando que ele se resolva com o tempo."</label>
+                	<label><input type="radio" name="questao11" value="D">"Repreender o colaborador publicamente para servir de exemplo."</label>
+            	</div>
+        	</div>
+
+        	<div class="question">
+            	<h3>QUESTÃO 12) "Em um momento de crise, qual é a postura mais eficaz de um líder frente à equipe?"</h3>
+            	<div class="options-grid">
+                	<label><input type="radio" name="questao12" value="A" required>"Ser transparente sobre a situação e envolver a equipe nas soluções."</label>
+                	<label><input type="radio" name="questao12" value="B">"Tomar decisões isoladamente e comunicar somente o necessário."</label>
+                	<label><input type="radio" name="questao12" value="C">"Aumentar a cobrança e diminuir os prazos para acelerar os resultados."</label>
+                	<label><input type="radio" name="questao12" value="D">"Transferir a responsabilidade para outros setores, pois um líder deve saber delegar funções."</label>
+            	</div>
+        	</div>
+
+        	<div class="question">
+            	<h3>QUESTÃO 13) "Como um líder pode promover a inovação dentro da equipe?"</h3>
+            	<div class="options-grid">
+                	<label><input type="radio" name="questao13" value="A" required>"Incentivando a criatividade, abrindo espaço para ideias e premiando soluções viáveis."</label>
+                	<label><input type="radio" name="questao13" value="B">"Solicitando inovações somente quando os resultados estiverem ruins."</label>
+                	<label><input type="radio" name="questao13" value="C">"Evitando mudanças para manter o padrão que já funciona."</label>
+                	<label><input type="radio" name="questao13" value="D">"Copiando estratégias de concorrentes sem consultar a equipe, uma vez que essas soluções demonstram resultados eficientes nas outras empresas."</label>
+            	</div>
+        	</div>
+
+        	<div class="question">
+            	<h3>QUESTÃO 14) "Em uma situação onde a empresa passa por um processo de reestruturação interna, muitos colaboradores demonstram resistência às mudanças propostas. Como líder, você nota que os níveis de engajamento estão caindo, mesmo após reuniões explicativas sobre a necessidade da reestruturação. Qual a estratégia mais eficaz para restaurar a confiança e engajar sua equipe?"</h3>
+            	<div class="options-grid">
+                	<label><input type="radio" name="questao14" value="A" required>"Estabelecer pequenos comitês internos com membros da equipe para participar ativamente do processo de mudança, sentindo-se parte da transformação."</label>
+                	<label><input type="radio" name="questao14" value="B">"Redobrar os esforços de comunicação com mais comunicados oficiais e reforço das metas a serem atingidas."</label>
+                	<label><input type="radio" name="questao14" value="C">"Conduzir avaliações individuais de desempenho para pressionar os mais resistentes a mudarem de postura."</label>
+                	<label><input type="radio" name="questao14" value="D">"Realocar os colaboradores resistentes para áreas menos estratégicas, reduzindo o impacto negativo no restante da equipe."</label>
+            	</div>
+        	</div>
+
+        	<div class="question">
+            	<h3>QUESTÃO 15) "Em um ambiente de trabalho híbrido, onde parte da equipe atua presencialmente e parte remotamente, começam a surgir queixas de desigualdade no reconhecimento das contribuições. A percepção é de que os colaboradores presenciais são mais lembrados e valorizados. Como um líder que preza pela equidade deve lidar com esse desafio?"</h3>
+            	<div class="options-grid">
+                	<label><input type="radio" name="questao15" value="A" required>"Implementar práticas formais de acompanhamento de entregas com critérios objetivos para todos, independentemente da presença física."</label>
+                	<label><input type="radio" name="questao15" value="B">"Criar um rodízio entre trabalho remoto e presencial, ainda que alguns colaboradores tenham limitações para essa mudança."</label>
+                	<label><input type="radio" name="questao15" value="C">"Realizar reuniões presenciais obrigatórias mensais para promover maior integração da equipe como um todo."</label>
+                	<label><input type="radio" name="questao15" value="D">"Ignorar a percepção, considerando que o desempenho será naturalmente percebido ao longo do tempo."</label>
+            	</div>
+        	</div>
+    	</div>
+    
+    	<button type="submit">Enviar Respostas</button>
+	</form>
+</body>
+</html>

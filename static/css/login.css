@@ -1,0 +1,114 @@
+
+
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background-color: #f3f1e9;
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  position: relative;
+}
+
+.flash-mensagem {
+  background-color: #ffdede;
+  color: #b00000;
+  padding: 10px;
+  border-radius: 6px;
+  margin-bottom: 16px;
+  text-align: center;
+  font-weight: bold;
+}
+
+.logo {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: #f3f1e9;
+  padding: 50px;
+}
+
+form {
+  width: 100%;
+  max-width: 480px;
+  padding: 20px 24px;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 72px;
+  color: #F47C2C;
+  text-align: center;
+  margin-bottom: 48px;
+}
+
+label {
+  display: block;
+  margin-bottom: 6px;
+  font-size: 18px;
+}
+
+input[type="email"],
+input[type="password"] {
+  width: 100%;
+  padding: 10px 12px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-bottom: 32px;
+  outline: none;
+  transition: border-color 0.3s;
+}
+
+input[type="email"]:focus,
+input[type="password"]:focus {
+  border-color: #F47C2C;
+  box-shadow: 0 0 3px #F47C2C;
+}
+
+.register-text {
+  text-align: center;
+  font-size: 18px;
+  margin-bottom: 24px;
+}
+
+.register-text a {
+  color: #3b5a6a;
+  text-decoration: none;
+}
+
+.register-text a:hover {
+  text-decoration: underline;
+}
+
+button {
+  width: 100%;
+  background-color: #2c4c5f;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  padding: 12px 0;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #244254;
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 48px;
+    margin-bottom: 32px;
+  }
+}

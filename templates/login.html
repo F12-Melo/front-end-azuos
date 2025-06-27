@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Login</title>
+  <link rel="stylesheet" href="../static/css/login.css" />
+</head>
+<body>
+  <div class="logo">
+    <img src="{{ url_for('static', filename='assets/logo.png') }}" alt="Logo Azuos em verde escuro com detalhe dourado no A" width="150" height="150" />
+  </div>
+
+<form method="POST" action="/login">
+  <form>
+    <h1>LOGIN</h1>
+    <label for="email">E-mail</label>
+    <input type="email" placeholder="exemplo@email.com" id="email" name="email" />
+
+    <label for="password">Senha</label>
+    <input type="password" placeholder="Senha" id="password" name="senha" />
+
+    <p class="register-text">
+      Não tem cadastro em nossa plataforma? <a href="../cadastro">Clique Aqui</a>!
+    </p>
+
+    <button type="submit">LOGAR</button>
+  </form>
+</body>
+</html>
