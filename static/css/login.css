@@ -1,5 +1,4 @@
-
-
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
 
 * {
   box-sizing: border-box;
@@ -14,6 +13,7 @@ body {
   align-items: center;
   height: 100vh;
   position: relative;
+  flex-direction: column;
 }
 
 .flash-mensagem {
@@ -21,9 +21,15 @@ body {
   color: #b00000;
   padding: 10px;
   border-radius: 6px;
-  margin-bottom: 16px;
+  margin-top: 16px;
   text-align: center;
   font-weight: bold;
+  display: none;
+}
+
+.flash-mensagem.sucesso {
+  background-color: #d4edda;
+  color: #155724;
 }
 
 .logo {
@@ -40,6 +46,7 @@ form {
   padding: 20px 24px;
   border-radius: 20px;
   box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  background-color: white;
 }
 
 h1 {
@@ -57,7 +64,8 @@ label {
 }
 
 input[type="email"],
-input[type="password"] {
+input[type="password"],
+input[type="text"] {
   width: 100%;
   padding: 10px 12px;
   font-size: 16px;
@@ -68,8 +76,7 @@ input[type="password"] {
   transition: border-color 0.3s;
 }
 
-input[type="email"]:focus,
-input[type="password"]:focus {
+input:focus {
   border-color: #F47C2C;
   box-shadow: 0 0 3px #F47C2C;
 }
@@ -104,6 +111,17 @@ button {
 
 button:hover {
   background-color: #244254;
+}
+
+.credenciais {
+  text-align: center;
+  margin-top: 24px;
+  font-size: 14px;
+  background-color: #e0f7fa;
+  padding: 12px;
+  border-radius: 8px;
+  max-width: 480px;
+  width: 90%;
 }
 
 @media (max-width: 480px) {

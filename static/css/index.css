@@ -110,7 +110,7 @@ figure img {
   position: absolute;
   width: 100%;
   min-height: 250px; /* Altura mínima mantida */
-  background-image: url("../assets/rodape2.jpg");
+  background-image: url("../../assets/rodape.jpeg");
   background-size: cover; /* Mantém proporção e cobre área */
   background-position: center center; /* Foco no centro */
   background-repeat: no-repeat;

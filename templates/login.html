@@ -5,26 +5,35 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Login</title>
   <link rel="stylesheet" href="../static/css/login.css" />
+  <script src="../static/js/login.js" defer></script>
 </head>
 <body>
   <div class="logo">
-    <img src="{{ url_for('static', filename='assets/logo.png') }}" alt="Logo Azuos em verde escuro com detalhe dourado no A" width="150" height="150" />
+    <img src="../assets/logo.png" alt="Logo Azuos em verde escuro com detalhe dourado no A" width="150" height="150" />
   </div>
 
-<form method="POST" action="/login">
-  <form>
+  <form onsubmit="return loginSimulado(event)">
     <h1>LOGIN</h1>
+
     <label for="email">E-mail</label>
-    <input type="email" placeholder="exemplo@email.com" id="email" name="email" />
+    <input type="text" placeholder="Digite o usuário" id="email" name="email" required />
 
     <label for="password">Senha</label>
-    <input type="password" placeholder="Senha" id="password" name="senha" />
+    <input type="password" placeholder="Senha" id="password" name="senha" required />
 
     <p class="register-text">
-      Não tem cadastro em nossa plataforma? <a href="../cadastro">Clique Aqui</a>!
+      Não tem cadastro em nossa plataforma? <a href="../templates/cadastro.html">Clique Aqui</a>!
     </p>
 
     <button type="submit">LOGAR</button>
+
+    <div id="mensagem" class="flash-mensagem"></div>
   </form>
+
+  <div class="credenciais">
+    <p><strong>Usuário de Teste:</strong> teste123</p>
+    <p><strong>Senha:</strong> 1234</p>
+    <p>Use essas credenciais para testar o sistema.</p>
+  </div>
 </body>
 </html>

@@ -84,16 +84,15 @@
 <body>
   <header>
     <div class="logo">
-      <img src="{{ url_for('static', filename='assets/logo.png') }}" alt="Logo Azuos" />
+      <img src="../assets/logo.png" alt="Logo Azuos" />
     </div>
     <nav class="menu">
       <ul>
-        <li><a href="../formulario">Formulario</a></li>
-        <li><a href="../historico">Historico</a></li>
+        <li><a href="../templates/forms.html">Formulario</a></li>
+        <li><a href="../templates/historico.html">Historico</a></li>
         <li><a href="#" onclick="abrirModal()">Usuário</a></li>
         <li>
-          <form action="{{ url_for('logout') }}" method="POST" style="display: inline;">
-            <button type="submit" class="botao-logout">Sair</button>
+            <li><a href="../index.html">Sair</a></li>
           </form>
         </li>
       </ul>

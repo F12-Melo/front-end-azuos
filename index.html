@@ -4,18 +4,18 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Plataforma Azuos</title>
-  <link rel="icon" href="../assets/logo.png" type="image/png">
+  <link rel="icon" href="../front-end-azuos/assets/logo.png" type="image/png">
   <link rel="stylesheet" href="../static/css/index.css" />
 </head>
 <body>
   <header>
     <div class="logo">
-      <img src="{{ url_for('static', filename='assets/logo.png') }}" alt="Logo Azuos" />
+      <img src="../assets/logo.png" alt="Logo Azuos" />
     </div>
     <nav class="menu">
       <ul>
-        <li><a href="../cadastro">Cadastro</a></li>
-        <li><a href="../login">Login</a></li>
+        <li><a href="../templates/cadastro.html">Cadastro</a></li>
+        <li><a href="../templates/login.html">Login</a></li>
       </ul>
     </nav>
   </header>
@@ -98,8 +98,9 @@
   </main>
 <footer class="rodape">
   <ul>
-    <li><a href="../index">Voltar ao topo</a></li>
-    <li><a href="../login">Contate-nos</a></li>
+    <li><a href="#topo">Voltar ao topo</a></li>
+    <li><a href="../templates/cadastro.html">Cadastro</a></li>
+    <li><a href="../templates/login.html">Login</a></li>
   </ul>
 </footer>
 </body>
