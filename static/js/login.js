@@ -1,27 +1,38 @@
-const usuarioSimulado = {
-  email: "teste123",
-  senha: "1234"
-};
+document.addEventListener("DOMContentLoaded", () => {
+  const form = document.getElementById('loginForm');
 
-function loginSimulado(event) {
-  event.preventDefault();
+  form.addEventListener('submit', async function (e) {
+    e.preventDefault();
 
-  const email = document.getElementById("email").value.trim();
-  const senha = document.getElementById("password").value.trim();
-  const mensagemDiv = document.getElementById("mensagem");
+    const loginData = {
+      email: document.getElementById('email').value,
+      senha: document.getElementById('senha').value
+    };
 
-  if (email === usuarioSimulado.email && senha === usuarioSimulado.senha) {
-    mensagemDiv.textContent = "Login bem-sucedido! Redirecionando...";
-    mensagemDiv.className = "flash-mensagem sucesso";
-    mensagemDiv.style.display = "block";
+    try {
+      const response = await fetch('http://127.0.0.1:5000/login', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(loginData)
+      });
 
-    // Redireciona para index2.html após 1.5 segundos
-    setTimeout(() => {
-      window.location.href = "../templates/index2.html";
-    }, 1500);
-  } else {
-    mensagemDiv.textContent = "Usuário ou senha incorretos.";
-    mensagemDiv.className = "flash-mensagem";
-    mensagemDiv.style.display = "block";
-  }
-}
+      const result = await response.json();
+
+      if (response.ok) {
+        alert("Login realizado com sucesso!");
+        console.log(result);
+        // Exemplo: salvando no localStorage
+        localStorage.setItem('usuario', JSON.stringify(result));
+        window.location.href = "../templates/index2.html"; // redireciona para página autenticada
+      } else {
+        alert(result.mensagem || "Falha no login. Verifique seus dados.");
+      }
+
+    } catch (error) {
+      alert("Erro ao tentar fazer login.");
+      console.error("Erro:", error);
+    }
+  });
+});
