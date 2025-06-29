@@ -4,30 +4,29 @@ document.addEventListener("DOMContentLoaded", () => {
   form.addEventListener('submit', async function (e) {
     e.preventDefault();
 
-    const loginData = {
+    const data = {
       email: document.getElementById('email').value,
       senha: document.getElementById('senha').value
     };
 
     try {
-      const response = await fetch('http://127.0.0.1:5000/login', {
+      const response = await fetch('http://127.0.0.1:5000/login_usuario', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
         },
-        body: JSON.stringify(loginData)
+        body: JSON.stringify(data)
       });
 
       const result = await response.json();
 
       if (response.ok) {
-        alert("Login realizado com sucesso!");
-        console.log(result);
-        // Exemplo: salvando no localStorage
-        localStorage.setItem('usuario', JSON.stringify(result));
-        window.location.href = "../templates/index2.html"; // redireciona para página autenticada
+        alert(result.mensagem || "Login realizado com sucesso!");
+        // (Opcional) armazenar o ID do usuário localmente
+        localStorage.setItem("usuario_id", result.usuario_id);
+        window.location.href = "../templates/index2.html";
       } else {
-        alert(result.mensagem || "Falha no login. Verifique seus dados.");
+        alert(result.erro || "Email ou senha inválidos.");
       }
 
     } catch (error) {
