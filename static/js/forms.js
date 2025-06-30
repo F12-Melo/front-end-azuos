@@ -30,7 +30,7 @@ document.addEventListener("DOMContentLoaded", () => {
         };
 
         try {
-            const response = await fetch("http://127.0.0.1:5000/kickoff", {
+            const response = await fetch("https://azuos-api-render.onrender.com/kickoff", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json"
