@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", () => {
     };
 
     try {
-      const response = await fetch('https://azuos.netlify.app/login_usuario', {
+      const response = await fetch('https://azuos-api-render.onrender.com/login_usuario', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
