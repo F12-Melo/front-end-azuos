@@ -1,10 +1,12 @@
 document.addEventListener("DOMContentLoaded", () => {
     const form = document.querySelector("form");
     const submitBtn = form.querySelector('button[type="submit"]'); // Seleciona o botão de submit
+    const loadingDiv = document.getElementById('loading');
     
     form.addEventListener("submit", async (e) => {
         e.preventDefault();
         submitBtn.disabled = true; // Desabilita o botão ao enviar
+        loadingDiv.style.display = 'flex';
         
         const respostas = [];
 
@@ -16,6 +18,7 @@ document.addEventListener("DOMContentLoaded", () => {
             } else {
                 alert(`Você não respondeu a Pergunta ${i}`);
                 submitBtn.disabled = false; // Reabilita se faltar resposta
+                loadingDiv.style.display = 'none';
                 return;
             }
         }
@@ -25,6 +28,7 @@ document.addEventListener("DOMContentLoaded", () => {
         if (!usuarioId) {
             alert("Usuário não autenticado.");
             submitBtn.disabled = false; //Reabilita se não autenticado
+            loadingDiv.style.display = 'none';
             return;
         }
 
@@ -45,10 +49,12 @@ document.addEventListener("DOMContentLoaded", () => {
             const result = await response.json();
             alert("Formulário enviado com sucesso!");
             console.log(result);
-            submitBtn.disabled = false; //Permitir o novo envio após a notificação
         } catch (error) {
             console.error("Erro ao enviar formulário:", error);
             alert("Erro ao enviar formulário.");
+        } finally {
+            submitBtn.disabled = false;
+            loadingDiv.style.display = 'none';
         }
     });
 });
