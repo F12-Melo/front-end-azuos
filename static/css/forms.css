@@ -201,3 +201,11 @@ button:hover {
     font-size: 16px;
   }
 }
+#submit-btn:disable{
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+#loading{
+  font-weight: bold;
+  color: #333;
+}
